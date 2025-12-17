@@ -1,0 +1,24 @@
+BasedOnStyle: LLVM
+IndentWidth: 4
+
+BasedOnStyle: LLVM
+IndentWidth: 4
+UseTab: Never
+AccessModifierOffset: 0
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortBlocksOnASingleLine: Never
+AlwaysBreakAfterReturnType: None
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterControlStatement: false
+  BeforeElse: true
+  AfterFunction: false
+  AfterClass: false
+  AfterNamespace: true
+  AfterStruct: true
+  AfterEnum: true
+  AfterUnion: true
+
+ColumnLimit: 0 
+MaxEmptyLinesToKeep: 1
