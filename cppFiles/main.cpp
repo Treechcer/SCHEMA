@@ -15,8 +15,12 @@ int main(int argc, char *argv[]) {
         cout << "You have to add the language you want to use";
         return 1;
     }
-    string folderName = ((std::filesystem::path)getExecFolder() / "builds" / (regex_replace(argv[1], regex("-"), ""))).string();
-    
+
+    std::string fileName = argv[1];
+    fileName = fileName[0] == '-' ? fileName.erase(0,1) : fileName;
+
+    string folderName = ((std::filesystem::path)getExecFolder() / "builds" / (fileName)).string();
+
     if (!getFolder(folderName)){
         cout << "This language doesn't have a set up, create a new folder \"" << folderName << "\" and add files you want to copy when you want this language to be initialized"; 
         return 1;
